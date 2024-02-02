@@ -33,7 +33,6 @@ classDiagram
 
     class Review{
         string review
-        string login
         int rtg
     }
 
