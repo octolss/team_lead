@@ -28,7 +28,6 @@ classDiagram
     class Clothes{
         string brand
         string type
-        int amount
         string man_or_da_woman
     }
 
