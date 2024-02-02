@@ -4,8 +4,8 @@ title: Online clothes Shop
 ---
 classDiagram
     User<|--Admin
-    Cart <|-- Payment
-    User <|-- Cart
+    Payment <|-- Cart
+    User <|-- Payment
     User<|--Review
     Cart <|-- Clothes
     Clothes <|-- Jeans
