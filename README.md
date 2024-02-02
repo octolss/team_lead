@@ -3,7 +3,7 @@
 title: Online clothes Shop
 ---
 classDiagram
-    Shop <|-- User
+    User<|--Admin
     Cart <|-- Payment
     User <|-- Cart
     User<|--Review
@@ -18,7 +18,11 @@ classDiagram
     class User{
         string login
         string password
-        check_captha()
+    }
+
+    class Admin{
+        vector<`User> banned
+        vector<`Clothes> items\s
     }
 
     class Clothes{
