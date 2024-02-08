@@ -43,14 +43,14 @@ public:
     }
 
     bool checkBanned(string& login){
-        for(int i; i < bannedUsers.size(); i++){
-            if(bannedUsers[i] == login){
-                cout << "This user is banned" << endl;
+        for(int i = 0; i < bannedUsers.size(); ++i){
+            if(bannedUsers[i]->login == login){
+
                 return true;
             }
         }
-        cout << "This user is valid" << endl;
-        return true;
+
+        return false;
     }
 };
 
@@ -107,12 +107,17 @@ int main() {
 
     Admin admin1;
     User user1;
-    user1.login = "exampleUser";
-    admin.banUser(&user1);
+    user1.login = "Vovka";
+    admin1.banUser(&user1);
 
-    for(int i; i<bannedUsers.size(); i++){
-        admin1.checkBanned(user1.login1)
+
+    if(admin1.checkBanned(user1.login)){
+        cout << "User " << user1.login << " is banned" << endl;
     }
+    else{
+        cout << user1.login << " is valid" << endl;
+    }
+
 
 
     return 0;
