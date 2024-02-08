@@ -22,7 +22,9 @@ classDiagram
 
     class Admin{
         vector<`User> banned
-        vector<`Clothes> items\s
+        vector<`Clothes> items
+
+        void banUser(User* user)
     }
 
     class Clothes{
