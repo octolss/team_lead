@@ -36,6 +36,11 @@ private:
     vector<User*> bannedUsers;
     vector<Clothes*> items;
     
+public:
+    void banUser(User* user) {
+        bannedUsers.push_back(user);
+        cout << user->login << " has been banned." << endl;
+    }
 };
 
 
@@ -87,6 +92,12 @@ int main() {
 
     Jeans myJeans("Levi's", "Denim", 50, "man", 32, "Denim", "Blue");
     myJeans.displayInfo();
+
+
+    Admin admin;
+    User user1;
+    user1.login = "exampleUser";
+    admin.banUser(&user1);
 
 
     return 0;
