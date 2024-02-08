@@ -97,7 +97,13 @@ int main() {
     Admin admin;
     User user1;
     user1.login = "exampleUser";
-    admin.banUser(&user1);
+    //admin.banUser(&user1);
+
+    for(int i; i<bannedUsers.size(); i++){
+        if(bannedUsers[i]==user1.login){
+            cout << "This user is banned" <<endl;
+        }
+    }
 
 
     return 0;
