@@ -32,9 +32,10 @@ public:
 
 class Admin : public User {
 
-public:
+private:
     vector<User*> bannedUsers;
     vector<Clothes*> items;
+    
 };
 
 
