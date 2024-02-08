@@ -41,6 +41,17 @@ public:
         bannedUsers.push_back(user);
         cout << user->login << " has been banned." << endl;
     }
+
+    bool checkBanned(string& login){
+        for(int i; i < bannedUsers.size(); i++){
+            if(bannedUsers[i] == login){
+                cout << "This user is banned" << endl;
+                return true;
+            }
+        }
+        cout << "This user is valid" << endl;
+        return true;
+    }
 };
 
 
@@ -94,15 +105,13 @@ int main() {
     myJeans.displayInfo();
 
 
-    Admin admin;
+    Admin admin1;
     User user1;
     user1.login = "exampleUser";
-    //admin.banUser(&user1);
+    admin.banUser(&user1);
 
     for(int i; i<bannedUsers.size(); i++){
-        if(bannedUsers[i]==user1.login){
-            cout << "This user is banned" <<endl;
-        }
+        admin1.checkBanned(user1.login1)
     }
 
 
